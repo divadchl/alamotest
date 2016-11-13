@@ -7,17 +7,40 @@
 //
 
 import UIKit
+import Alamofire
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var fishImg: UIImageView!
+    @IBOutlet weak var fishLabel: UILabel!
+    @IBOutlet weak var fetchButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        loadFish()
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    @IBAction func onTapFetch(_ sender: Any) {
+        loadFish()
+    }
+    
+    func loadFish() {
+        let req = try! APIClient.Router.fish.asURLRequest()
+        Alamofire.request(req).responseJSON { response in
+            guard let JSON = response.result.value as? [String:String] else { return }
+            debugPrint(JSON)
+            self.fishLabel.text = JSON["name"]
+            DispatchQueue.global().async {
+                let data = try? Data(contentsOf: JSON["image_url"]!.asURL())
+                DispatchQueue.main.async {
+                    self.fishImg.image = UIImage(data: data!)
+                }
+            }
+        }
     }
 
 

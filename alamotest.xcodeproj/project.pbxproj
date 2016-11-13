@@ -7,11 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0269DF1BD54A4DF0FB6AC7A2 /* Pods_alamotest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75C40C1FD51494DBB81CD74A /* Pods_alamotest.framework */; };
 		6343DF511DD7DDE30070A9A5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6343DF501DD7DDE30070A9A5 /* AppDelegate.swift */; };
 		6343DF531DD7DDE30070A9A5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6343DF521DD7DDE30070A9A5 /* ViewController.swift */; };
 		6343DF561DD7DDE30070A9A5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6343DF541DD7DDE30070A9A5 /* Main.storyboard */; };
 		6343DF581DD7DDE30070A9A5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6343DF571DD7DDE30070A9A5 /* Assets.xcassets */; };
 		6343DF5B1DD7DDE30070A9A5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6343DF591DD7DDE30070A9A5 /* LaunchScreen.storyboard */; };
+		6343DF651DD7E0730070A9A5 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6343DF641DD7E0730070A9A5 /* APIClient.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,10 @@
 		6343DF571DD7DDE30070A9A5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6343DF5A1DD7DDE30070A9A5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6343DF5C1DD7DDE30070A9A5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6343DF641DD7E0730070A9A5 /* APIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
+		65C70A4BBE0DF6C8D788F5B1 /* Pods-alamotest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-alamotest.release.xcconfig"; path = "Pods/Target Support Files/Pods-alamotest/Pods-alamotest.release.xcconfig"; sourceTree = "<group>"; };
+		75C40C1FD51494DBB81CD74A /* Pods_alamotest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_alamotest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F1B30A8C15A6E1A264ED6730 /* Pods-alamotest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-alamotest.debug.xcconfig"; path = "Pods/Target Support Files/Pods-alamotest/Pods-alamotest.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0269DF1BD54A4DF0FB6AC7A2 /* Pods_alamotest.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +47,8 @@
 			children = (
 				6343DF4F1DD7DDE30070A9A5 /* alamotest */,
 				6343DF4E1DD7DDE30070A9A5 /* Products */,
+				AB8167246FB6BE68CA734F9D /* Pods */,
+				C353629407BA90D04E809C35 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -60,8 +69,26 @@
 				6343DF571DD7DDE30070A9A5 /* Assets.xcassets */,
 				6343DF591DD7DDE30070A9A5 /* LaunchScreen.storyboard */,
 				6343DF5C1DD7DDE30070A9A5 /* Info.plist */,
+				6343DF641DD7E0730070A9A5 /* APIClient.swift */,
 			);
 			path = alamotest;
+			sourceTree = "<group>";
+		};
+		AB8167246FB6BE68CA734F9D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F1B30A8C15A6E1A264ED6730 /* Pods-alamotest.debug.xcconfig */,
+				65C70A4BBE0DF6C8D788F5B1 /* Pods-alamotest.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		C353629407BA90D04E809C35 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				75C40C1FD51494DBB81CD74A /* Pods_alamotest.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +98,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6343DF5F1DD7DDE30070A9A5 /* Build configuration list for PBXNativeTarget "alamotest" */;
 			buildPhases = (
+				8AE843A38B93CA6A79E78EBE /* [CP] Check Pods Manifest.lock */,
 				6343DF491DD7DDE30070A9A5 /* Sources */,
 				6343DF4A1DD7DDE30070A9A5 /* Frameworks */,
 				6343DF4B1DD7DDE30070A9A5 /* Resources */,
+				187098D28523724AF88F1B48 /* [CP] Embed Pods Frameworks */,
+				8C727CD9A6D56C4847D22B55 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -131,6 +161,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		187098D28523724AF88F1B48 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-alamotest/Pods-alamotest-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8AE843A38B93CA6A79E78EBE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		8C727CD9A6D56C4847D22B55 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-alamotest/Pods-alamotest-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		6343DF491DD7DDE30070A9A5 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -138,6 +216,7 @@
 			files = (
 				6343DF531DD7DDE30070A9A5 /* ViewController.swift in Sources */,
 				6343DF511DD7DDE30070A9A5 /* AppDelegate.swift in Sources */,
+				6343DF651DD7E0730070A9A5 /* APIClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -181,6 +260,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -230,6 +310,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -256,7 +337,9 @@
 		};
 		6343DF601DD7DDE30070A9A5 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F1B30A8C15A6E1A264ED6730 /* Pods-alamotest.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = alamotest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -268,7 +351,9 @@
 		};
 		6343DF611DD7DDE30070A9A5 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 65C70A4BBE0DF6C8D788F5B1 /* Pods-alamotest.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = alamotest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -297,6 +382,7 @@
 				6343DF611DD7DDE30070A9A5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
