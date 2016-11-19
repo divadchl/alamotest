@@ -30,9 +30,13 @@ class ViewController: UIViewController {
     
     func loadFish() {
         let req = try! APIClient.Router.fish.asURLRequest()
-        Alamofire.request(req).responseJSON { response in
+        Alamofire.request(req).responseJSON {
+            response in
             guard let JSON = response.result.value as? [String:String] else { return }
             debugPrint(JSON)
+            
+            let prueba = JSON as NSDictionary
+            print(prueba["name"]!)
             self.fishLabel.text = JSON["name"]
             DispatchQueue.global().async {
                 let data = try? Data(contentsOf: JSON["image_url"]!.asURL())
